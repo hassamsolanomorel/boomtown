@@ -119,7 +119,7 @@ public class BoomTown_Requests {
 				
 				//Print response if requested
 				if(print) {
-					System.out.println("Response for: " + path);
+					System.out.println("Response from: " + path);
 					BoomTown_PrettyPrint.prettyPrint(json);
 				}
 			}else{

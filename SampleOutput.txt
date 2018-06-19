@@ -1,7 +1,41 @@
-Dates Correct: true
-Repo Count Correct: true
+/****************************************************************/
+  _____ _____ _______               _    _ _____ _____ _______ 
+ / ____|_   _|__   __|         /\  | |  | |  __ \_   _|__   __|
+| |  __  | |    | |           /  \ | |  | | |  | || |    | |   
+| | |_ | | |    | |          / /\ \| |  | | |  | || |    | |   
+| |__| |_| |_   | |         / ____ \ |__| | |__| || |_   | |   
+ \_____|_____|  |_|        /_/    \_\____/|_____/_____|  |_|   
+                ______ ______                                  
+               |______|______|                                 
 
-Response for: https://api.github.com/orgs/BoomTownROI/repos?per_page=100
+
+Git_Audit
+Authored By: Hassam Solano-Morel
+
+Purpose: This program retrieves a JSON response from the GitHub
+API, trims the data, and prints the report to a .txt file.
+
+/////////// Audit Legends ///////////
+Repos Response Legend:
+{'id': 'repo_name'}
+
+Events Response Legend:
+{
+'id': {
+    'repo': {
+        [REPO INFOMATION]
+    },
+    'type': '[EVENT_TYPE]'
+}
+
+/////////////////////////////////////
+************Start Validations************
+'updated_at' is more recent than 'created_at:'true
+'repos_url' response is same as array count from 'repos_url':true
+*************End Validations*************
+
+**********Start Path Traversals**********
+Response from: https://api.github.com/orgs/BoomTownROI/repos?per_page=100
 {
   "59852048": "react-sublime-snippet",
   "29993804": "chstechmap",
@@ -64,7 +98,7 @@ Not Found
 
 ***********************************
 
-Response for: https://api.github.com/orgs/BoomTownROI?per_page=100
+Response from: https://api.github.com/orgs/BoomTownROI?per_page=100
 {
   "repos_url": "https://api.github.com/orgs/BoomTownROI/repos",
   "has_repository_projects": true,
@@ -102,7 +136,7 @@ Not Found
 
 ***********************************
 
-Response for: https://api.github.com/orgs/BoomTownROI/events?per_page=100
+Response from: https://api.github.com/orgs/BoomTownROI/events?per_page=100
 {
   "7750670924": {
     "repo": {
@@ -915,3 +949,4 @@ Not Found
 
 ***********************************
 
+***********End Path Traversals***********

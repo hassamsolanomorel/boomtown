@@ -21,8 +21,7 @@ There are additional copies of the source .java and .jar files within the "src" 
 run from the command line by following these steps (instructions are given for Linux based OSs):
 
 1. Open Terminal
-2. CD to the src folder 
-3. (Compile) javac -cp gson-2.8.5.jar:json-simple-1.1.1.jar *.java
-4. (Run) java -cp gson-2.8.5.jar:json-simple-1.1.1.jar:. BoomTown_Main
+2. CD to the root "boomtown" folder
+3. run: sh ./run.sh 
 
-In both methods a new file named "output.txt" will be created in the src folder after running BoomTown_Main. 
+In both methods a new file named "output.txt" will be created after running BoomTown_Main. 
